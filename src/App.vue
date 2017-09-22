@@ -18,7 +18,7 @@ export default {
     return {
       title:"vue-todos",
       todos:[
-        {value:"阅读一本关于前端开发的书6666",done:false},
+        {value:"阅读一本关于前端开发的书888",done:false},
         {value:"补充范例模板",done:true},
         {value:"阅读一本关于前端开发的书2",done:false}
       ]
