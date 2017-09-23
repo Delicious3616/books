@@ -9,8 +9,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "loadash": "^1.0.0",
-    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "vue": "^2.3.3"
   },
@@ -25,6 +23,7 @@
     "less-loader": "^4.0.5",
     "style-loader": "^0.18.2",
     "vue-loader": "^12.1.0",
+    "vue-router": "^2.7.0",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"

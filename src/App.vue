@@ -1,17 +1,44 @@
 <template>
   <div id="app">
-    <h1>{{title}}</h1>
-    <ul class="todos">
-      <li v-for = '(todo,index) in todos' 
-      :class="{'checked':todo.done}"
-      :id="index">
-          <label>
-            {{index+1}}.{{todo.value}}
-          </label>
-          <time>{{todo.created | date}}</time>
-      </li>
-    </ul>
-
+    <div class="tabs">
+      <ul>
+        
+          <router-link :to="{name:'Home'}" tag="li">
+            <div>
+              <img src="./assets/images/home.svg">
+              <div>首页</div>
+            </div>
+          </router-link>
+                
+        
+          <router-link :to="{name:'Categories'}" tag="li">
+            <div>
+              <img src="./assets/images/category.svg">
+              <div>分类</div>
+            </div>
+          </router-link>
+           
+        
+          <router-link :to="{name:'shopping-cart'}" tag="li">
+            <div>
+              <img src="./assets/images/cart.svg">
+              <div>购物车</div>
+            </div>
+          </router-link>
+               
+        
+          <router-link :to="{name:'me'}" tag="li">
+            <div>
+              <img src="./assets/images/me.svg">
+              <div>我</div>
+            </div>
+          </router-link>
+        
+      </ul>
+    </div>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
