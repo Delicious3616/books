@@ -2,9 +2,9 @@
   <div id="app">
     <h1>{{title}}</h1>
     <ul>
-      <li v-for = 'todo in todos'>
+      <li v-for = '(todo,index) in todos' :id="index">
           <label>
-            {{todo.value}}
+            {{index+1}}.{{todo.value}}
           </label>
       </li>
     </ul>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import './assets/todos.less'
 export default {
   name: 'app',
   data () {
