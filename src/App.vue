@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <h1>{{title}}</h1>
-    <ul>
-      <li v-for = '(todo,index) in todos' :id="index">
+    <ul class="todos">
+      <li v-for = '(todo,index) in todos' 
+      :class="{'checked':todo.done}"
+      :id="index">
           <label>
             {{index+1}}.{{todo.value}}
           </label>
@@ -13,6 +15,7 @@
 
 <script>
 import './assets/todos.less'
+import './assets/site.less'
 export default {
   name: 'app',
   data () {
