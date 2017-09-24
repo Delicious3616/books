@@ -1,15 +1,16 @@
 <template>
-  <div id="app">
-
-    <div class="content">
+ 
+<transition name="slide-fade">
       <router-view></router-view>
-    </div>
-  </div>
+</transition>
+    
+    
+
 </template>
 
 <script>
 import './assets/todos.less'
-import './assets/site.less'
+import './assets/less/site.less'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
 moment.locale('zh-cn')
@@ -35,5 +36,14 @@ export default {
 </script>
 
 <style>
-
+  .slide-fade-enter-active{
+  transition:all .3s ease;
+}
+.slide-fade-leave-active{
+  transition:all .3s cubic-bezier(1.0,0.5,0.8,1.0);
+}
+.slide-fade-enter,.slide-fade-leave-active{
+  transition:tranlateX(-430px);
+  opacity:0
+}
 </style>

@@ -33,6 +33,11 @@
               <div>我</div>
             </div>
           </router-link>
+         <router-link :to="{name:'BookDetail'}" tag="li">
+            <div>
+                xiangqing
+            </div>
+          </router-link>
    
         
       </ul>

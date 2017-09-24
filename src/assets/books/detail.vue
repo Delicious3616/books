@@ -5,7 +5,7 @@
 <script type="text/ecmascript-6">
     export default{
     	created(){
-    		const bookID=this.$router.params.id
+    		
 
     	}
     }
